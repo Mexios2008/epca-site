@@ -1,14 +1,14 @@
 /* Global Styles */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #F7F7F7;
-  color: #333333;
+  background-color: #F5F5F5;
+  color: #424242;
   margin: 0;
   padding: 0;
 }
 
 header {
-  background-color: #003366;
+  background-color: #FFC107;
   color: white;
   padding: 40px 20px;
   text-align: center;
@@ -16,7 +16,7 @@ header {
 }
 
 h1, h2 {
-  color: #FFFFFF;
+  color: #212121;
   margin: 0;
 }
 
@@ -46,7 +46,7 @@ th, td {
 }
 
 th {
-  background-color: #00A9E0;
+  background-color: #FFC107;
   color: white;
 }
 
@@ -55,24 +55,24 @@ tr:nth-child(even) {
 }
 
 tr:hover {
-  background-color: #E5F5FF;
+  background-color: #FFEB3B;
 }
 
 a {
   text-decoration: none;
-  color: #00A9E0;
+  color: #FFC107;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #003366;
+  color: #212121;
 }
 
 footer {
   text-align: center;
   padding: 20px;
   font-size: 0.9em;
-  background-color: #003366;
+  background-color: #FFC107;
   color: white;
   margin-top: 40px;
 }
@@ -96,7 +96,7 @@ a:hover {
 
 /* Boutons avec effets */
 button {
-  background-color: #00A9E0;
+  background-color: #FFC107;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -106,6 +106,6 @@ button {
 }
 
 button:hover {
-  background-color: #003366;
+  background-color: #212121;
   transform: scale(1.05);
 }
