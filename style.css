@@ -1,15 +1,16 @@
 /* Global Styles */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom right, #f0f8ff, #fafafa);
+  background: linear-gradient(135deg, #f0f4c3, #ffffff);
   color: #333;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 /* Header */
 header {
-  background: linear-gradient(135deg, #FFC107, #FF9800);
+  background: linear-gradient(120deg, #FFC107, #FF9800);
   color: white;
   padding: 60px 20px;
   text-align: center;
@@ -21,8 +22,8 @@ header {
 header::after {
   content: "🌟";
   position: absolute;
-  font-size: 60px;
-  bottom: 10px;
+  font-size: 70px;
+  bottom: 15px;
   right: 20px;
   opacity: 0.1;
   animation: float 6s ease-in-out infinite;
@@ -36,26 +37,25 @@ header p {
 
 /* Titles */
 h1 {
-  font-size: 2.7em;
+  font-size: 2.8em;
   margin-bottom: 10px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
 }
 
 h2 {
   color: #FF6F00;
   font-size: 1.9em;
   margin-bottom: 20px;
-  border-left: 6px solid #FF9800;
-  padding-left: 15px;
   position: relative;
-  animation: fadeInUp 0.8s ease-in-out;
+  padding-left: 15px;
+  border-left: 6px solid #FF9800;
 }
 
 h2::before {
-  content: "🎈";
+  content: "🎉";
   position: absolute;
   left: -35px;
-  top: -5px;
+  top: 0;
   font-size: 1.2em;
 }
 
@@ -67,18 +67,19 @@ section {
   border-radius: 20px;
   max-width: 850px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-  transform: translateY(30px);
-  opacity: 0;
-  animation: fadeInUp 1s forwards;
+  animation: gradientBorder 10s ease infinite;
+  border: 3px solid transparent;
+  background-clip: padding-box;
 }
 
-/* Table */
+/* Table with animated hover effect */
 table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
-  overflow: hidden;
   border-radius: 10px;
+  overflow: hidden;
+  position: relative;
 }
 
 th, td {
@@ -87,6 +88,7 @@ th, td {
   text-align: left;
   font-size: 16px;
   background-color: #ffffff;
+  transition: background-color 0.3s ease;
 }
 
 th {
@@ -95,12 +97,15 @@ th {
   letter-spacing: 1px;
 }
 
-tr:hover {
-  background-color: #FFF3E0;
-  transition: background-color 0.3s ease;
+tr:hover td {
+  background: linear-gradient(135deg, #fffde7 0%, #ffeb3b44 100%);
+  cursor: pointer;
+  box-shadow: inset 0 0 10px #fbc02d33;
+  transform: scale(1.01);
+  transition: all 0.3s ease;
 }
 
-/* Links */
+/* Links with underline effect */
 a {
   text-decoration: none;
   color: #FF9800;
@@ -137,7 +142,7 @@ footer {
   color: white;
   margin-top: 60px;
   animation: pulse 4s infinite;
-  border-top: 4px dashed white;
+  border-top: 4px dotted white;
 }
 
 /* Lists and paragraphs */
@@ -149,7 +154,7 @@ ul {
 ul li {
   margin-bottom: 10px;
   line-height: 1.5;
-  list-style: "✨ ";
+  list-style: "🌿 ";
 }
 
 section ul ul {
@@ -186,5 +191,17 @@ section p {
   }
   50% {
     transform: translateY(-10px);
+  }
+}
+
+@keyframes gradientBorder {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-image: linear-gradient(to right, #FFD54F, #FFB74D, #FF7043) 1;
+  }
+  100% {
+    border-color: transparent;
   }
 }
