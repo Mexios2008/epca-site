@@ -1,37 +1,52 @@
 /* Global Styles */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #F5F5F5;
+  background: linear-gradient(to bottom right, #fffde7, #f1f8e9);
   color: #424242;
   margin: 0;
   padding: 0;
 }
 
+/* Header */
 header {
-  background-color: #FFC107;
+  background: linear-gradient(to right, #FFC107, #FF9800);
   color: white;
-  padding: 40px 20px;
+  padding: 60px 20px;
   text-align: center;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
 }
 
-h1, h2 {
-  color: #212121;
-  margin: 0;
+header p {
+  font-size: 1.2em;
+  margin-top: 10px;
 }
 
+/* Titles */
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #FF6F00;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+/* Sections */
 section {
   background: white;
-  margin: 40px auto;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 800px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 850px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transform: translateY(30px);
   opacity: 0;
   animation: fadeInUp 1s forwards;
 }
 
+/* Tables */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -51,16 +66,18 @@ th {
 }
 
 tr:nth-child(even) {
-  background-color: #F1F1F1;
+  background-color: #FFF9C4;
 }
 
 tr:hover {
-  background-color: #FFEB3B;
+  background-color: #FFF59D;
+  transition: background-color 0.3s ease;
 }
 
+/* Links */
 a {
   text-decoration: none;
-  color: #FFC107;
+  color: #FF9800;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -69,43 +86,21 @@ a:hover {
   transform: scale(1.1);
 }
 
+/* Footer */
 footer {
   text-align: center;
-  padding: 20px;
-  font-size: 0.9em;
-  background-color: #FFC107;
+  padding: 30px;
+  font-size: 1em;
+  background: linear-gradient(to right, #FFC107, #FF9800);
   color: white;
-  margin-top: 40px;
+  margin-top: 60px;
+  animation: pulse 3s infinite;
 }
 
-/* Animation pour l’apparition des sections */
-@keyframes fadeInUp {
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-/* Boutons avec effets */
-button {
-  background-color: #FFC107;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-button:hover {
-  background-color: #212121;
-  transform: scale(1.05);
-}
-
-/* Nouveaux styles pour listes et paragraphes */
+/* Lists and paragraphs */
 ul {
   margin: 15px 0;
-  padding-left: 20px;
+  padding-left: 25px;
 }
 
 ul li {
@@ -120,4 +115,40 @@ section ul ul {
 section p {
   margin-bottom: 10px;
   font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Buttons */
+button {
+  background-color: #FFC107;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
+
+button:hover {
+  background-color: #FF6F00;
+  transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.85;
+  }
 }
