@@ -1,76 +1,55 @@
-
 body {
-  font-family: "Helvetica Neue", sans-serif;
-  background-color: #f4f6f8;
-  color: #1f2e4d;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #F9FAFB;
+  color: #374151;
   margin: 0;
   padding: 0;
 }
 
 header {
-  background-color: #005eb8;
+  background-color: #1E3A8A;
   color: white;
+  padding: 20px;
   text-align: center;
-  padding: 1.5em 1em;
 }
 
-.logo {
-  width: 120px;
-  margin-bottom: 0.5em;
-}
-
-h1 {
-  margin: 0;
-  font-size: 2em;
+h1, h2 {
+  color: #1E3A8A;
 }
 
 section {
+  background: white;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
   max-width: 800px;
-  margin: 2em auto;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  padding: 2em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-h2 {
-  color: #005eb8;
-  border-bottom: 2px solid #c9d6e3;
-  padding-bottom: 0.3em;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
-h3 {
-  color: #003f77;
-  margin-top: 1.5em;
+th, td {
+  border: 1px solid #E5E7EB;
+  padding: 12px;
+  text-align: left;
 }
 
-ul {
-  list-style: none;
-  padding-left: 0;
+th {
+  background-color: #3B82F6;
+  color: white;
 }
 
-li {
-  margin-bottom: 0.6em;
-  line-height: 1.6;
-}
-
-.note {
-  font-style: italic;
-  color: #555;
-}
-
-.inscription {
-  background-color: #e6f0fa;
-  border-left: 5px solid #005eb8;
-  padding: 1em;
-  margin-top: 2em;
-  border-radius: 4px;
+tr:nth-child(even) {
+  background-color: #F3F4F6;
 }
 
 footer {
   text-align: center;
+  padding: 15px;
   font-size: 0.9em;
-  color: #888;
-  margin-top: 2em;
-  padding: 1em;
+  color: #6B7280;
 }
