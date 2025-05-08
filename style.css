@@ -61,11 +61,12 @@ tr:hover {
 a {
   text-decoration: none;
   color: #FFC107;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 a:hover {
   color: #212121;
+  transform: scale(1.1);
 }
 
 footer {
@@ -85,15 +86,6 @@ footer {
   }
 }
 
-/* Effet de transition sur les liens */
-a {
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-a:hover {
-  transform: scale(1.1);
-}
-
 /* Boutons avec effets */
 button {
   background-color: #FFC107;
@@ -108,4 +100,24 @@ button {
 button:hover {
   background-color: #212121;
   transform: scale(1.05);
+}
+
+/* Nouveaux styles pour listes et paragraphes */
+ul {
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+section ul ul {
+  margin-top: 5px;
+  padding-left: 20px;
+}
+
+section p {
+  margin-bottom: 10px;
+  font-size: 16px;
 }
