@@ -1,30 +1,31 @@
 /* Global Styles */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom right, #f9fbe7, #e8f5e9);
-  color: #424242;
+  background: linear-gradient(to bottom right, #f0f8ff, #fafafa);
+  color: #333;
   margin: 0;
   padding: 0;
 }
 
 /* Header */
 header {
-  background: linear-gradient(135deg, #81C784, #4CAF50);
+  background: linear-gradient(135deg, #FFC107, #FF9800);
   color: white;
   padding: 60px 20px;
   text-align: center;
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
   position: relative;
   overflow: hidden;
 }
 
 header::after {
-  content: "🌿";
+  content: "🌟";
   position: absolute;
-  right: 20px;
+  font-size: 60px;
   bottom: 10px;
-  font-size: 50px;
-  opacity: 0.2;
+  right: 20px;
+  opacity: 0.1;
+  animation: float 6s ease-in-out infinite;
 }
 
 header p {
@@ -35,23 +36,27 @@ header p {
 
 /* Titles */
 h1 {
-  font-size: 2.5em;
+  font-size: 2.7em;
   margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 h2 {
-  color: #2E7D32;
-  font-size: 1.8em;
-  margin-bottom: 15px;
+  color: #FF6F00;
+  font-size: 1.9em;
+  margin-bottom: 20px;
+  border-left: 6px solid #FF9800;
+  padding-left: 15px;
   position: relative;
+  animation: fadeInUp 0.8s ease-in-out;
 }
 
 h2::before {
-  content: "✨";
+  content: "🎈";
   position: absolute;
-  left: -30px;
-  top: 0;
-  font-size: 1em;
+  left: -35px;
+  top: -5px;
+  font-size: 1.2em;
 }
 
 /* Sections */
@@ -61,13 +66,13 @@ section {
   padding: 30px;
   border-radius: 20px;
   max-width: 850px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
   transform: translateY(30px);
   opacity: 0;
   animation: fadeInUp 1s forwards;
 }
 
-/* Table Styles */
+/* Table */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -77,36 +82,50 @@ table {
 }
 
 th, td {
-  border: 1px solid #E0E0E0;
+  border: 1px solid #e0e0e0;
   padding: 15px;
   text-align: left;
   font-size: 16px;
+  background-color: #ffffff;
 }
 
 th {
-  background-color: #66BB6A;
+  background-color: #FF9800;
   color: white;
-}
-
-tr:nth-child(even) {
-  background-color: #F0F4C3;
+  letter-spacing: 1px;
 }
 
 tr:hover {
-  background-color: #DCEDC8;
+  background-color: #FFF3E0;
   transition: background-color 0.3s ease;
 }
 
 /* Links */
 a {
   text-decoration: none;
-  color: #43A047;
+  color: #FF9800;
   transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
 }
 
 a:hover {
-  color: #1B5E20;
-  transform: scale(1.1);
+  color: #212121;
+  transform: scale(1.05);
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #FF9800;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
 }
 
 /* Footer */
@@ -114,10 +133,11 @@ footer {
   text-align: center;
   padding: 30px;
   font-size: 1em;
-  background: linear-gradient(to right, #81C784, #66BB6A);
+  background: linear-gradient(to right, #FFC107, #FF9800);
   color: white;
   margin-top: 60px;
-  animation: pulse 3s infinite;
+  animation: pulse 4s infinite;
+  border-top: 4px dashed white;
 }
 
 /* Lists and paragraphs */
@@ -129,6 +149,7 @@ ul {
 ul li {
   margin-bottom: 10px;
   line-height: 1.5;
+  list-style: "✨ ";
 }
 
 section ul ul {
@@ -155,6 +176,15 @@ section p {
     opacity: 1;
   }
   50% {
-    opacity: 0.85;
+    opacity: 0.88;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
   }
 }
